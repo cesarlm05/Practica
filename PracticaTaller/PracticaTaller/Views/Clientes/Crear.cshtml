@@ -1,0 +1,27 @@
+﻿
+<form action="/Clientes/Guardar">
+
+    <br />
+
+    <label>Apellido: </label>
+    <input name="Apellido" />
+
+    <br />
+
+    <label>Nombre: </label>
+    <input name="Nombre" />
+
+    <br />
+
+    <label>Nro de DNI: </label>
+    <input name="nro_dni" />
+
+    <br />
+
+    @if (ViewBag.Mensaje != null)
+    {
+        <h3>@ViewBag.Mensaje</h3>
+    }
+    <input type="submit" value="Guardar" />
+</form>
+

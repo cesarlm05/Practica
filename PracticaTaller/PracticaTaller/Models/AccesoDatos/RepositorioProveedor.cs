@@ -7,7 +7,7 @@ namespace PracticaTaller.Models.AccesoDatos
 {
     public class RepositorioProveedor
     {
-        ModeloDbTaller baseDatos = new ModeloDbTaller();
+        TallerDB_Entities baseDatos = new TallerDB_Entities();
 
         public List<Proveedor> Listar()
         {

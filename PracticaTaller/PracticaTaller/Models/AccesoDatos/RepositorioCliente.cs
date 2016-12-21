@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using PracticaTaller.Models.AccesoDatos;
+
 
 namespace PracticaTaller.Models.AccesoDatos
 {
     public class RepositorioCliente
     {
-        ModeloDbTaller baseDatos = new ModeloDbTaller();
+        TallerDB_Entities baseDatos = new TallerDB_Entities();
 
         public List<Cliente> Listar()
         {
