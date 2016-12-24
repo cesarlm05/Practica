@@ -42,5 +42,17 @@ namespace PracticaTaller.Controllers
             return RedirectToAction("Listar");
         }
 
+        public ActionResult Modificar(int id)
+        {
+            var clienteModificar = gestorCliente.ObtenerPorId(id);
+            return View(clienteModificar);
+        }
+
+        public ActionResult GuardarModificacion(Cliente cliente)
+        {
+            gestorCliente.Modificar(cliente);
+            return RedirectToAction("Listar");
+        }
+
     }
 }

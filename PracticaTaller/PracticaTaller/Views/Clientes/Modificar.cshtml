@@ -1,0 +1,30 @@
+﻿@model PracticaTaller.Models.AccesoDatos.Cliente
+
+<form action="/Clientes/GuardarModificacion">
+
+    <br />
+
+    <label>Apellido:</label>
+    <input name="Apellido" value="@Model.Apellido" />
+
+    <br />
+
+    <label>Nombre:</label>
+    <input name="Nombre" value="@Model.Nombre" />
+
+    <br />
+
+    <label>Nro DNI:</label>
+    <input name="nro_dni" value="@Model.nro_dni" />
+
+    <br />
+
+    @Html.Hidden("idCliente", Model.idCliente)
+
+    <br />
+    @if (ViewBag.Mensaje != null)
+    {
+        <h3>@ViewBag.Mensaje</h3>
+    }
+    <input type="submit" value="Guardar" />
+</form>
