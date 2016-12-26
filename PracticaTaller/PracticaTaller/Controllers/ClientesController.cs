@@ -54,5 +54,11 @@ namespace PracticaTaller.Controllers
             return RedirectToAction("Listar");
         }
 
+        public ActionResult Eliminar(int id)
+        {
+            gestorCliente.Eliminar(id);
+            return RedirectToAction("Listar");
+        }
+
     }
 }
