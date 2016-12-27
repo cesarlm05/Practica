@@ -1,0 +1,31 @@
+﻿
+<form action="/Productos/Guardar">
+
+    <br />
+
+    <label>Nombre: </label>
+    <input name="Nombre" />
+
+    <br />
+
+    <label>Descripcion: </label>
+    <input name="Descripcion" />
+
+    <br />
+
+    <label>Stock: </label>
+    <input name="stock" />
+
+    <br />
+
+    <label>Precio:</label>
+    <input name="precio"/>
+
+    <br />
+
+    @if (ViewBag.Mensaje != null)
+    {
+        <h3>@ViewBag.Mensaje</h3>
+    }
+    <input type="submit" value="Guardar" />
+</form>

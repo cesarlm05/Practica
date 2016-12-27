@@ -1,0 +1,29 @@
+﻿@model List<PracticaTaller.Models.AccesoDatos.Producto>
+
+<table class="table-bordered">
+    <thead>
+        <tr>
+            <th>Nombre:</th>
+            <th>Descripción:</th>
+            <th>Stock:</th>
+            <th>Precio:</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var producto in Model)
+        {
+            <tr>
+                <td>@producto.nombre</td>
+                <td>@producto.descripcion</td>
+                <td>@producto.stock</td>
+                <td>@producto.precio</td>
+                <td>
+                    @Html.ActionLink("Eliminar", "Eliminar", new { id = @producto.id_producto })
+                </td>
+                <td>
+                    @Html.ActionLink("Modificar", "Modificar", new { id = @producto.id_producto })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

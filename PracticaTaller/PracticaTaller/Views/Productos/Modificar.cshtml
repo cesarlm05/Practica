@@ -1,0 +1,35 @@
+﻿@model PracticaTaller.Models.AccesoDatos.Producto
+
+<form action="/Productos/GuardarModificacion">
+
+    <br />
+
+    <label>Nombre:</label>
+    <input name="nombre" value="@Model.nombre" />
+
+    <br />
+
+    <label>Descripción:</label>
+    <input name="descripcion" value="@Model.descripcion" />
+
+    <br />
+
+    <label>Stock:</label>
+    <input name="stock" value="@Model.stock" />
+
+    <br />
+
+    <label>Precio:</label>
+    <input name="precio" value="@Model.precio"/>
+
+    <br />
+
+    @Html.Hidden("id_producto", Model.id_producto)
+
+    <br />
+    @if (ViewBag.Mensaje != null)
+    {
+        <h3>@ViewBag.Mensaje</h3>
+    }
+    <input type="submit" value="Guardar" />
+</form>
