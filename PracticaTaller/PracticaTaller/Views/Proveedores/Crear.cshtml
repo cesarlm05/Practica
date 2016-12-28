@@ -1,0 +1,27 @@
+﻿
+<form action="/Proveedores/Guardar">
+
+    <br />
+
+    <label>Razón Social: </label>
+    <input name="razon_social" />
+
+    <br />
+
+    <label>CUIT: </label>
+    <input name="cuit" />
+
+    <br />
+
+    <label>Dirección: </label>
+    <input name="direccion" />
+
+    <br />
+
+    @if (ViewBag.Mensaje != null)
+    {
+        <h3>@ViewBag.Mensaje</h3>
+    }
+    <input type="submit" value="Guardar" />
+</form>
+

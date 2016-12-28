@@ -155,6 +155,7 @@
     <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
+    <Compile Include="Controllers\ProveedoresController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -191,6 +192,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\Cliente.cs" />
     <Compile Include="ViewModels\Producto.cs" />
+    <Compile Include="ViewModels\Proveedor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -217,6 +219,9 @@
     <Content Include="Views\Productos\Listar.cshtml" />
     <Content Include="Views\Productos\Crear.cshtml" />
     <Content Include="Views\Productos\Modificar.cshtml" />
+    <Content Include="Views\Proveedores\Listar.cshtml" />
+    <Content Include="Views\Proveedores\Crear.cshtml" />
+    <Content Include="Views\Proveedores\Modificar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

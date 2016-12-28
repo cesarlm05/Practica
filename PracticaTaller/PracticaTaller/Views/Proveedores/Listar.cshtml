@@ -1,0 +1,30 @@
+﻿@model List<PracticaTaller.Models.AccesoDatos.Proveedor>
+
+<table class="table-bordered">
+    <thead>
+        <tr>
+            <th>Razon Social</th>
+            <th>CUIT</th>
+            <th>Dirección:</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var proveedor in Model)
+        {
+            <tr>
+                <td>@proveedor.razon_social</td>
+                <td>@proveedor.cuit</td>
+                <td>@proveedor.direccion</td>
+                <td>
+                    @Html.ActionLink("Eliminar", "Eliminar", new { id = @proveedor.id_proveedor })
+                </td>
+                <td>
+                    @Html.ActionLink("Modificar", "Modificar", new { id = @proveedor.id_proveedor })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
