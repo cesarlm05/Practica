@@ -51,5 +51,6 @@ namespace PracticaTaller.Models.AccesoDatos
               (p => p.Apellido.Contains(parametroBusqueda) || p.Nombre.Contains(parametroBusqueda) || Convert.ToString(p.nro_dni).Contains(parametroBusqueda));
             return clienteEncontrado.ToList();
         }
+
     }
 }

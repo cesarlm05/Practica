@@ -1,0 +1,30 @@
+﻿@model List<PracticaTaller.Models.AccesoDatos.Venta>
+
+<table class="table-bordered">
+    <thead>
+        <tr>
+            <th>Fecha</th>
+            <th>Total:</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Venta in Model)
+        {
+            <tr>
+                <td>@Venta.Fecha</td>
+                <td>@Venta.Total</td>  
+                <td></td>               
+            </tr>
+            foreach (var detalle in Venta.DetalleVenta)
+            {
+                <tr>
+                    <td>Detalle</td>
+                    <td>@detalle.Producto.nombre</td>
+                    <td>@detalle.Producto.precio</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

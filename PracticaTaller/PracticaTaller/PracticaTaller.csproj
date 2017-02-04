@@ -156,10 +156,14 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
     <Compile Include="Controllers\ProveedoresController.cs" />
+    <Compile Include="Controllers\VentasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccesoDatos\Cliente.cs">
+      <DependentUpon>ModeloDbTaller.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccesoDatos\DetalleVenta.cs">
       <DependentUpon>ModeloDbTaller.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AccesoDatos\ModeloDbTaller.Context.cs">
@@ -186,13 +190,23 @@
     <Compile Include="Models\AccesoDatos\RepositorioCliente.cs" />
     <Compile Include="Models\AccesoDatos\RepositorioProducto.cs" />
     <Compile Include="Models\AccesoDatos\RepositorioProveedor.cs" />
+    <Compile Include="Models\AccesoDatos\RepositorioVenta.cs" />
+    <Compile Include="Models\AccesoDatos\sysdiagrams.cs">
+      <DependentUpon>ModeloDbTaller.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccesoDatos\Venta.cs">
+      <DependentUpon>ModeloDbTaller.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\LogicaNegocio\GestorCliente.cs" />
     <Compile Include="Models\LogicaNegocio\GestorProducto.cs" />
     <Compile Include="Models\LogicaNegocio\GestorProveedor.cs" />
+    <Compile Include="Models\LogicaNegocio\GestorVenta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\Cliente.cs" />
+    <Compile Include="ViewModels\DetalleVenta.cs" />
     <Compile Include="ViewModels\Producto.cs" />
     <Compile Include="ViewModels\Proveedor.cs" />
+    <Compile Include="ViewModels\Venta.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -222,6 +236,8 @@
     <Content Include="Views\Proveedores\Listar.cshtml" />
     <Content Include="Views\Proveedores\Crear.cshtml" />
     <Content Include="Views\Proveedores\Modificar.cshtml" />
+    <Content Include="Views\Ventas\Listar.cshtml" />
+    <Content Include="Views\Ventas\Crear.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
