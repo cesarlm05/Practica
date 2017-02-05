@@ -4,13 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a41400e3a4724306b01b80acda9eea4a" Name="Diagram1">
-        <EntityTypeShape EntityType="TallerDBModel.Cliente" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TallerDBModel.Producto" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TallerDBModel.Proveedor" Width="1.5" PointX="4.625" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="TallerDBModel.DetalleVenta" Width="1.5" PointX="2.875" PointY="3.625" />
-        <EntityTypeShape EntityType="TallerDBModel.Venta" Width="1.5" PointX="5.375" PointY="3.75" />
-        <EntityTypeShape EntityType="TallerDBModel.sysdiagrams" Width="1.5" PointX="0.5" PointY="3.625" />
+      <Diagram DiagramId="a41400e3a4724306b01b80acda9eea4a" Name="Diagram1" ZoomLevel="82">
+        <EntityTypeShape EntityType="TallerDBModel.Cliente" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="TallerDBModel.DetalleVenta" Width="1.5" PointX="3" PointY="0.875" />
+        <EntityTypeShape EntityType="TallerDBModel.Producto" Width="1.5" PointX="0.75" PointY="4.875" />
+        <EntityTypeShape EntityType="TallerDBModel.Proveedor" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="TallerDBModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TallerDBModel.Venta" Width="1.5" PointX="0.75" PointY="1.25" />
         <AssociationConnector Association="TallerDBModel.FK_DetalleVenta_Producto" />
         <AssociationConnector Association="TallerDBModel.FK_DetalleVenta_Venta" />
       </Diagram>

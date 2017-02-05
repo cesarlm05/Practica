@@ -34,7 +34,7 @@ namespace PracticaTaller.Controllers
             var nuevaVenta = new Venta
             {
                 Fecha = venta.Fecha,
-                Total = venta.Total
+                //Total = venta.Total
             };
             gestorVentas.Guardar(nuevaVenta);
             return RedirectToAction("Listar");

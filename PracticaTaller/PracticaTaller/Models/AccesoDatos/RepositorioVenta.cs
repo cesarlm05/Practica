@@ -22,23 +22,23 @@ namespace PracticaTaller.Models.AccesoDatos
 
         public void Eliminar(int id)
         {
-            var venta = baseDatos.Venta.FirstOrDefault(c => c.idVenta == id);
+            var venta = baseDatos.Venta.FirstOrDefault(c => c.IdVenta == id);
             baseDatos.Venta.Remove(venta);
             baseDatos.SaveChanges();
         }
 
         public Venta ObtenerPorId(int id)
         {
-            return baseDatos.Venta.FirstOrDefault(c => c.idVenta == id);
+            return baseDatos.Venta.FirstOrDefault(c => c.IdVenta == id);
         }
 
         public void Modificar(Venta venta)
         {
-            var ventaParaModificar = baseDatos.Venta.FirstOrDefault(c => c.idVenta == venta.idVenta);
+            var ventaParaModificar = baseDatos.Venta.FirstOrDefault(c => c.IdVenta == venta.IdVenta);
 
             ventaParaModificar.DetalleVenta = venta.DetalleVenta;
             ventaParaModificar.Fecha = venta.Fecha;
-            ventaParaModificar.Total = venta.Total;
+            //ventaParaModificar.Total = venta.Total;
 
             baseDatos.SaveChanges();
         }

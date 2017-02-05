@@ -26,10 +26,10 @@ namespace PracticaTaller.Models.AccesoDatos
         }
     
         public virtual DbSet<Cliente> Cliente { get; set; }
+        public virtual DbSet<DetalleVenta> DetalleVenta { get; set; }
         public virtual DbSet<Producto> Producto { get; set; }
         public virtual DbSet<Proveedor> Proveedor { get; set; }
-        public virtual DbSet<DetalleVenta> DetalleVenta { get; set; }
-        public virtual DbSet<Venta> Venta { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<Venta> Venta { get; set; }
     }
 }

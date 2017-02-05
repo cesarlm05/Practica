@@ -14,9 +14,10 @@ namespace PracticaTaller.Models.AccesoDatos
     
     public partial class DetalleVenta
     {
-        public int idDetalleVenta { get; set; }
-        public Nullable<int> idVenta { get; set; }
-        public Nullable<int> idProducto { get; set; }
+        public int IdDetalleVenta { get; set; }
+        public Nullable<int> IdVenta { get; set; }
+        public Nullable<int> IdProducto { get; set; }
+        public Nullable<decimal> Precio { get; set; }
     
         public virtual Producto Producto { get; set; }
         public virtual Venta Venta { get; set; }

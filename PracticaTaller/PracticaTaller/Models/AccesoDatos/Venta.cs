@@ -20,9 +20,8 @@ namespace PracticaTaller.Models.AccesoDatos
             this.DetalleVenta = new HashSet<DetalleVenta>();
         }
     
-        public int idVenta { get; set; }
+        public int IdVenta { get; set; }
         public Nullable<System.DateTime> Fecha { get; set; }
-        public Nullable<decimal> Total { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DetalleVenta> DetalleVenta { get; set; }
