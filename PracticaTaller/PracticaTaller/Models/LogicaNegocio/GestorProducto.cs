@@ -16,7 +16,6 @@ namespace PracticaTaller.Models.LogicaNegocio
             return repoProducto.Listar();
         }
 
-
         public void Guardar(Producto producto)
         {
             repoProducto.Guardar(producto);
