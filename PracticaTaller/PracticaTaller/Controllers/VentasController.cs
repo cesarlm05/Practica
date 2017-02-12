@@ -12,6 +12,7 @@ namespace PracticaTaller.Controllers
     public class VentasController : Controller
     {
         GestorVenta gestorVentas = new GestorVenta();
+        GestorProducto gestorProductos = new GestorProducto();
         // GET: Ventas
         public ActionResult Index()
         {
@@ -38,6 +39,12 @@ namespace PracticaTaller.Controllers
             };
             gestorVentas.Guardar(nuevaVenta);
             return RedirectToAction("Listar");
+        }
+
+        public ActionResult NuevaVenta()
+        {
+            var listadoProducto = gestorProductos.Listar();
+            return View(listadoProducto);
         }
     }
 }

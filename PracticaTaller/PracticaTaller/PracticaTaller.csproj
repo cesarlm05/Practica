@@ -239,6 +239,7 @@
     <Content Include="Views\Proveedores\Modificar.cshtml" />
     <Content Include="Views\Ventas\Listar.cshtml" />
     <Content Include="Views\Ventas\Crear.cshtml" />
+    <Content Include="Views\Ventas\NuevaVenta.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

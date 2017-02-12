@@ -19,5 +19,6 @@ namespace PracticaTaller.Models.LogicaNegocio
         {
             repoVenta.Guardar(venta);
         }
+
     }
 }

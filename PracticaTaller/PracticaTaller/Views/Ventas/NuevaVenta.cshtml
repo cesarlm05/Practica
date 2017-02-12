@@ -1,0 +1,32 @@
+﻿@model List<PracticaTaller.Models.AccesoDatos.Producto>
+
+<br />
+<div>
+    <input id="txt-buscar" type="text" placeholder="Producto"/>
+    <button id="botonEnviar" disabled="disabled">ok</button>
+</div>
+<br/>
+
+<table class="table-bordered">
+    <thead>
+        <tr>
+            <th>Nombre:</th>
+            <th>Descripción:</th>
+            <th>Stock:</th>
+            <th>Precio:</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var producto in Model)
+        {
+            <tr class="producto">
+                <td class="nombre">@producto.nombre</td>
+                <td>@producto.descripcion</td>
+                <td>@producto.stock</td>
+                <td>@producto.precio</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script src="~/Scripts/ScriptsVentas.js"></script>
