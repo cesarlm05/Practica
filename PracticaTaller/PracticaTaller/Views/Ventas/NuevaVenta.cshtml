@@ -7,6 +7,30 @@
 </div>
 <br/>
 
+<style>
+    #content {
+        position: absolute;
+        min-height: 50%;
+        width: 180%;
+        top: 8%;
+        left: 35%;
+    }
+
+    .selected {
+        cursor: pointer;
+    }
+
+        .selected:hover {
+            background-color: #0585C0;
+            color: white;
+        }
+
+    .seleccionada {
+        background-color: #0585C0;
+        color: white;
+    }
+</style>
+
 <table class="table-bordered">
     <thead>
         <tr>
@@ -26,6 +50,23 @@
                 <td>@producto.precio</td>
             </tr>
         }
+
+     <div id="content">
+        <label>Agregar artículos</label>
+        <button id="bt_add" class="btn btn-default">Agregar</button>
+        <button id="bt_del" class="btn btn-default">Eliminar</button>
+        <button id="bt_delall" class="btn btn-default">Eliminar todo</button>
+        <table id="tabla" class="table table-bordered">
+        <thead>
+            <tr>
+                <td>Nº</td>
+                <td>Descripción</td>
+                <td>Precio</td>
+            </tr>
+        </thead>
+    </table>
+    </div>
+
     </tbody>
 </table>
 
