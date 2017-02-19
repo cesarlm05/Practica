@@ -1,19 +1,15 @@
 ﻿@model List<PracticaTaller.Models.AccesoDatos.Producto>
 
 <br />
-<div>
-    <input id="txt-buscar" type="text" placeholder="Producto"/>
-    <button id="botonEnviar" disabled="disabled">ok</button>
-</div>
-<br/>
-
+<br />
+<br />
 <style>
     #content {
         position: absolute;
         min-height: 50%;
         width: 180%;
         top: 8%;
-        left: 35%;
+        left: 12%;
     }
 
     .selected {
@@ -31,43 +27,54 @@
     }
 </style>
 
-<table class="table-bordered">
-    <thead>
-        <tr>
-            <th>Nombre:</th>
-            <th>Descripción:</th>
-            <th>Stock:</th>
-            <th>Precio:</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var producto in Model)
-        {
+
+
+<div id="">
+    <label>Agregar artículos</label>
+    <input id="txt-buscar" type="text" placeholder="Producto" />
+    <button id="bt_add" class="btn btn-default" disabled="disabled">Agregar</button>
+    <button id="bt_del" class="btn btn-default">Eliminar</button>
+    <button id="bt_delall" class="btn btn-default">Eliminar todo</button>
+</div>
+<br/>
+
+    <table class="table-bordered" id="tabla-productos">
+        <thead>
+            <tr>
+                <th>Nombre:</th>
+                <th>Descripción:</th>
+                <th>Stock:</th>
+                <th>Precio:</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var producto in Model)
+            {
             <tr class="producto">
                 <td class="nombre">@producto.nombre</td>
                 <td>@producto.descripcion</td>
                 <td>@producto.stock</td>
                 <td>@producto.precio</td>
             </tr>
-        }
+            }
 
-     <div id="content">
-        <label>Agregar artículos</label>
-        <button id="bt_add" class="btn btn-default">Agregar</button>
-        <button id="bt_del" class="btn btn-default">Eliminar</button>
-        <button id="bt_delall" class="btn btn-default">Eliminar todo</button>
-        <table id="tabla" class="table table-bordered">
+
+        </tbody>
+    </table>
+    <table id="tabla" class="table table-bordered">
         <thead>
             <tr>
-                <td>Nº</td>
-                <td>Descripción</td>
-                <td>Precio</td>
+                <th>N°</th>
+                <th>Nombre:</th>
+                <th>Descripción:</th>
+                <th>Stock:</th>
+                <th>Precio:</th>
             </tr>
         </thead>
+        <tbody></tbody>
     </table>
-    </div>
 
-    </tbody>
-</table>
+
+
 
 <script src="~/Scripts/ScriptsVentas.js"></script>

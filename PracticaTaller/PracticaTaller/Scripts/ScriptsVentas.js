@@ -8,7 +8,7 @@
     $("#txt-buscar").on('input', function () {
         var nombreBuscado = $("#txt-buscar").val().toUpperCase();
 
-        $("tr.producto").each(function (index, data) {
+        $("#tabla-productos tr.producto").each(function (index, data) {
             var nombreProducto = ($(this).find("td.nombre").html().toUpperCase());
             if (nombreProducto.startsWith(nombreBuscado)) {
                 $(this).show();
@@ -17,12 +17,12 @@
             }
         });
 
-        var cantidadVisibles = $(".producto:visible").length;
+        var cantidadVisibles = $("#tabla-productos tr.producto:visible").length;
         if (cantidadVisibles === 1) {
-            $("#botonEnviar").attr('disabled', false);
+            $("#bt_add").attr('disabled', false);
         } else {
 
-            $("#botonEnviar").attr('disabled', true);
+            $("#bt_add").attr('disabled', true);
         }
     });
 
@@ -35,30 +35,34 @@
     $('#bt_delall').click(function () {
         eliminarTodasFilas();
     });
+    $(document).on("click", ".producto-venta", function () {
+
+        seleccionar($(this).find('td.numero-fila').html())
+    });
 });
 
 var cont = 0;
 var id_fila_selected = [];
 function agregar() {
     cont++;
-    var fila = '<tr class="selected" id="fila' + cont + '" onclick="seleccionar(this.id);"><td>' + cont + '</td><td>Articulo de la lista</td><td>0.00</td></tr>';
-    $('#tabla').append(fila);
+    var producto = $("#tabla-productos").find("tr.producto:visible").addClass('producto-venta');;
+    $('#tabla tbody').append(producto.clone().prepend('<td class="numero-fila" id="' + cont + '"></td>'));
     reordenar();
 }
 
 function seleccionar(id_fila) {
-    if ($('#' + id_fila).hasClass('seleccionada')) {
-        $('#' + id_fila).removeClass('seleccionada');
+    if ($('#' + id_fila).closest('tr').hasClass('seleccionada')) {
+        $('#' + id_fila).closest('tr').removeClass('seleccionada');
     }
     else {
-        $('#' + id_fila).addClass('seleccionada');
+        $('#' + id_fila).closest('tr').addClass('seleccionada');
     }
     id_fila_selected.push(id_fila);
 }
 
 function eliminar(id_fila) {
     for (var i = 0; i < id_fila.length; i++) {
-        $('#' + id_fila[i]).remove();
+        $('#' + id_fila[i]).closest('tr').remove();
     }
     reordenar();
 }
@@ -67,6 +71,7 @@ function reordenar() {
     var num = 1;
     $('#tabla tbody tr').each(function () {
         $(this).find('td').eq(0).text(num);
+        $(this).find('td.numero-fila').attr("id", num);
         num++;
     });
 }
